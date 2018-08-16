@@ -1,0 +1,15 @@
+<div class="row">
+    <h2>Digital Academy Photo Albums</h2>
+    <!--<button class="btn btn-lg btn-info" [class.active]="filterBy==='all'" (click)="filterBy='all'">Album 1</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy==='boats'" (click)="filterBy='boats'">Album 2</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy==='camping'" (click)="filterBy='camping'">Album 3</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy==='library'" (click)="filterBy='library'">Album 4</button>
+    -->
+    <ul id="thumbnailsList">
+        <li *ngFor="let image of (visibleImages | imageFilter:filterBy)" >
+            <a [routerLink] ="['/image', image.id]">
+                <img src="{{image.url}}" class="tn" width="200" height="160">
+            </a>
+        </li>
+    </ul>
+</div>
